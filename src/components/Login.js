@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Login.css'
 import { Button, TextField } from '@material-ui/core'
-import { auth, provider } from '../firebase'
+import { auth } from '../firebase'
 import { useHistory, Link } from 'react-router-dom'
 import { useStateValue } from './StateProvider'
 
@@ -22,10 +22,6 @@ function Login() {
         e.preventDefault()
         auth.signInWithEmailAndPassword(cred.email, cred.password)
         .then(res => {
-            dispatch({
-                type: 'SET_USER',
-                user: res.user
-            })
             history.push('/')
         })
         .catch(err => {

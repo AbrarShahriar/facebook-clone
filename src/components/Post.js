@@ -2,8 +2,6 @@ import { Avatar, useMediaQuery } from '@material-ui/core'
 import { AccountCircle, ChatBubbleOutline, ExpandMoreOutlined, NearMe, ThumbUpSharp } from '@material-ui/icons'
 import React from 'react'
 import './Post.css'
-import moment from 'moment';
-
 
 function Post({ img, profilePic, username, timestamp, message }) {
     const isPhone = useMediaQuery('(max-width: 600px)')

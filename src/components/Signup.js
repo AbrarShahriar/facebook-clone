@@ -12,7 +12,6 @@ function Signup() {
         password: ''
     })
     const history = useHistory()
-    const [{ user }, dispatch] = useStateValue()
     const handleChange = e => {
         setCred({
             ...cred,
@@ -26,10 +25,6 @@ function Signup() {
             res.user.updateProfile({
                 displayName: cred.username
             }).then(() => {
-                dispatch({
-                    type: 'SET_USER',
-                    user: res.user
-                })
                 history.push('/')
             })
             .catch(err => {

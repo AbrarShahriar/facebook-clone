@@ -6,7 +6,7 @@ import { useStateValue } from './StateProvider'
 import { auth } from '../firebase'
 
 function Header() {
-    const [{ user }, dispatch] = useStateValue()
+    const [{ user }] = useStateValue()
     const isPhone = useMediaQuery('(max-width: 600px)')
     const iconSize = !isPhone ? 'large' : 'medium'
     const [anchorEl, setAnchorEl] = useState(null);

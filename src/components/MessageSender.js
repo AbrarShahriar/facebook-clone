@@ -8,7 +8,7 @@ import { useMediaQuery } from '@material-ui/core'
 import db from '../firebase'
 
 function MessageSender() {
-    const [{ user }, dispatch] = useStateValue()
+    const [{ user }] = useStateValue()
     const [input, setInput] = useState('')
     const isPhone = useMediaQuery('(max-width: 600px)')
     const [imgUrl, setImgUrl] = useState('')
