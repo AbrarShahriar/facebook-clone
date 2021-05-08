@@ -1,0 +1,15 @@
+.storyRow {
+    display: flex;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 20px 5px;
+}
+.storyRow::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .storyRow {
+        padding: 10px;
+    }
+}
